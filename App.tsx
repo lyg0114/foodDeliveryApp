@@ -8,7 +8,7 @@ import {
   Text,
   TouchableHighlight,
   View,
-  Pressable,
+  Pressable
 } from "react-native";
 import { useCallback } from "react";
 
@@ -28,8 +28,11 @@ function HomeScreen({ navigation }: HomeScreenProps) {
   return (
     <>
       <View style={{ flex: 2, backgroundColor: "yellow", alignItems: "center", justifyContent: "center" }}>
-        <Pressable onPress={onClick}>
-          <Text>Home Screen</Text>
+        <Pressable onPress={onClick} style={{
+          padding: 20,
+          backgroundColor: "blue"
+        }}>
+          <Text style={{ color: "white" }}>Home Screen</Text>
         </Pressable>
       </View>
       <View style={{ flex: 2, backgroundColor: "orange", alignItems: "center", justifyContent: "center" }}>
