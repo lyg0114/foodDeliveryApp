@@ -4,6 +4,7 @@ import {
   createNativeStackNavigator,
   NativeStackScreenProps
 } from "@react-navigation/native-stack";
+
 import {
   Text,
   TouchableHighlight,
@@ -59,7 +60,6 @@ function DetailsScreen({ navigation }: DetailsScreenProps) {
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
-
 function App() {
   return (
     <NavigationContainer>
