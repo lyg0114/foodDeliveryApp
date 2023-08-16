@@ -14,6 +14,7 @@ function SignIn() {
     setPassword(text);
   }, []);
 
+  const canGoNext = email && password;
   return (
     <View>
       <View>
@@ -27,11 +28,11 @@ function SignIn() {
       <View style={styles.buttonZone}>
         <Pressable
           onPress={onSubmit}
-          style={!email || !password
+          style={!canGoNext
             ? styles.loginButton
             : [styles.loginButton, styles.loginButtonActive]
           }
-          disabled={!email || !password}
+          disabled={!canGoNext}
         >
           <Text style={styles.loginButtonText}>로그인</Text>
         </Pressable>
